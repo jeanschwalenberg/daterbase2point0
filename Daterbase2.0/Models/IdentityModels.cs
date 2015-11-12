@@ -29,10 +29,13 @@ namespace Daterbase2._0.Models
         public string Job { get; set; }
         public string School { get; set; }
         public string AboutMe { get; set; }
+        public string WhoIAmHereToMeet { get; set; }
+        public string WhatIAmLookingForInARelationship { get; set; }
         public string ReligionOrLackThereof { get; set; }
         public string City { get; set; }
         public string State { get; set; }
         public string Ethnicity { get; set; }
+        public string ProfileImage { get; set; }
         //public string[] FavoriteThings { get; set; }
         //TODO Favorite Things
 
@@ -40,12 +43,12 @@ namespace Daterbase2._0.Models
         public int? MatchHighestAge { get; set; }
         public int? ZipCode { get; set; }
         public int? HomeTimeZone { get; set; }
-        public int? Kids { get; set; }
-        public int? Height { get; set; }
+        public int? NumberOfKids { get; set; }
+        public int? HeightInInches { get; set; }
 
 
         public Gender? Gender { get; set; }
-        public Gender GenderPreference { get; set; }
+        public Gender? GenderPreference { get; set; }
         //TODO allow multiple selections for Gender Preference
 
         public bool? MyZipCodeOnly { get; set; }
@@ -54,7 +57,6 @@ namespace Daterbase2._0.Models
         public bool? Smoker { get; set; }
         public bool? Drinker { get; set; }
         public bool? Stoner { get; set; }
-        public bool? Druggie { get; set; }
         public bool? Single { get; set; }
 
         //public virtual ICollection<Match> SavedMatches { get; set; }
