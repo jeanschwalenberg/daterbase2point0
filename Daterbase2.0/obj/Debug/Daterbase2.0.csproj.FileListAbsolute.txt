@@ -67,3 +67,5 @@ C:\Users\Shiny\Desktop\source\Daterbase2.0\Daterbase2.0\bin\Microsoft.Owin.Secur
 C:\Users\Shiny\Desktop\source\Daterbase2.0\Daterbase2.0\obj\Debug\Daterbase2.0.csprojResolveAssemblyReference.cache
 C:\Users\Shiny\Desktop\source\Daterbase2.0\Daterbase2.0\obj\Debug\Daterbase2.0.dll
 C:\Users\Shiny\Desktop\source\Daterbase2.0\Daterbase2.0\obj\Debug\Daterbase2.0.pdb
+C:\Users\Shiny\Desktop\source\Daterbase2.0\Daterbase2.0\obj\Debug\Daterbase2._0.Migrations.InitialCreate.resources
+C:\Users\Shiny\Desktop\source\Daterbase2.0\Daterbase2.0\obj\Debug\Daterbase2.0.csproj.GenerateResource.Cache
