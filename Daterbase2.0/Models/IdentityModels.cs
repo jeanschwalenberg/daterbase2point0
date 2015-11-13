@@ -35,7 +35,7 @@ namespace Daterbase2._0.Models
         public string City { get; set; }
         public string State { get; set; }
         public string Ethnicity { get; set; }
-        public string ProfileImage { get; set; }
+        public string ProfileImageLocation { get; set; }
         //public string[] FavoriteThings { get; set; }
         //TODO Favorite Things
 
@@ -58,6 +58,7 @@ namespace Daterbase2._0.Models
         public bool? Drinker { get; set; }
         public bool? Stoner { get; set; }
         public bool? Single { get; set; }
+        public bool? Monogamous { get; set; }
 
         //public virtual ICollection<Match> SavedMatches { get; set; }
         //TODO Saved Matches
