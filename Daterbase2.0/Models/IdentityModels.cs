@@ -67,7 +67,7 @@ namespace Daterbase2._0.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("TheDaterbase2.0", throwIfV1Schema: false)
         {
         }
 

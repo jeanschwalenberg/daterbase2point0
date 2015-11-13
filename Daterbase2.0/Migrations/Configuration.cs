@@ -9,8 +9,7 @@ namespace Daterbase2._0.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            ContextKey = "Daterbase2._0.Models.ApplicationDbContext";
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Daterbase2._0.Models.ApplicationDbContext context)
