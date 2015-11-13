@@ -20,7 +20,7 @@ namespace Daterbase2._0.Models
             return userIdentity;
         }
 
-        public DateTime BirthDate { get; set; }
+        public DateTime? BirthDate { get; set; }
         public DateTime ProfileCreationDate = DateTime.UtcNow;
 
         public string DisplayUsername { get; set; }
