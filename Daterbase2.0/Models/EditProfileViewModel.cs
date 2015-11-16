@@ -1,6 +1,7 @@
 ﻿using Daterbase2._0.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -13,6 +14,8 @@ namespace Daterbase2._0.Models
         //TODO
 
         public string DisplayUsername { get; set; }
+
+        [Required]
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Job { get; set; }

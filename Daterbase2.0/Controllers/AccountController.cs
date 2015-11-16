@@ -320,6 +320,58 @@ namespace Daterbase2._0.Controllers
             return View();
         }
 
+        // POST: /Account/EditProfile
+        [HttpPost]
+        public ActionResult EditProfile(EditProfileViewModel inModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(inModel);
+            }
+
+            var user = UserManager.FindById(User.Identity.GetUserId());
+            
+            if (user != null)
+            {
+                user.BirthDate = inModel.BirthDate;
+
+                user.DisplayUsername = inModel.DisplayUsername;
+                user.FirstName = inModel.FirstName;
+                user.LastName = inModel.LastName;
+                user.Job = inModel.Job;
+                user.School = inModel.School;
+                user.AboutMe = inModel.AboutMe;
+                user.WhoIAmHereToMeet = inModel.WhoIAmHereToMeet;
+                user.WhatIAmLookingForInARelationship = inModel.WhatIAmLookingForInARelationship;
+                user.ReligionOrLackThereof = inModel.ReligionOrLackThereof;
+                user.City = inModel.City;
+                user.State = inModel.State;
+                user.ProfileImageLocation = inModel.ProfileImageLocation;
+
+                user.MatchLowestAge = inModel.MatchLowestAge;
+                user.MatchHighestAge = inModel.MatchHighestAge;
+                user.ZipCode = inModel.ZipCode;
+                user.HomeTimeZone = inModel.HomeTimeZone;
+                user.NumberOfKids = inModel.NumberOfKids;
+                user.HeightInInches = inModel.HeightInInches;
+
+                user.Gender = inModel.Gender;
+                user.GenderPreference = inModel.GenderPreference;
+
+                user.MyZipCodeOnly = inModel.MyZipCodeOnly;
+                user.DesireForKids = inModel.DesireForKids;
+                user.WillingnessToDateParents = inModel.WillingnessToDateParents;
+                user.Smoker = inModel.Smoker;
+                user.Drinker = inModel.Drinker;
+                user.Stoner = inModel.Stoner;
+                user.Single = inModel.Single;
+                user.Monogamous = inModel.Monogamous;
+            }
+            UserManager.Update(user);
+            return View(inModel);
+
+        }
+
         //
         // POST: /Account/ExternalLogin
         [HttpPost]
