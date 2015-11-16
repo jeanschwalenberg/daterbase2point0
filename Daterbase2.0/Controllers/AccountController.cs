@@ -271,6 +271,17 @@ namespace Daterbase2._0.Controllers
             return View();
         }
 
+        // GET: TODO put link in here
+        public ActionResult EditProfile()
+        {
+            var user = UserManager.FindById(User.Identity.GetUserId());
+            var outModel = new EditProfileViewModel
+            {
+
+            };
+            return View();
+        }
+
         //
         // POST: /Account/ExternalLogin
         [HttpPost]
