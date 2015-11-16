@@ -275,10 +275,48 @@ namespace Daterbase2._0.Controllers
         public ActionResult EditProfile()
         {
             var user = UserManager.FindById(User.Identity.GetUserId());
-            var outModel = new EditProfileViewModel
-            {
 
-            };
+            if (user != null)
+            {
+                var outModel = new EditProfileViewModel
+                {
+                    BirthDate = user.BirthDate,
+
+                    DisplayUsername = user.DisplayUsername,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Job = user.Job,
+                    School = user.School,
+                    AboutMe = user.AboutMe,
+                    WhoIAmHereToMeet = user.WhoIAmHereToMeet,
+                    WhatIAmLookingForInARelationship = user.WhatIAmLookingForInARelationship,
+                    ReligionOrLackThereof = user.ReligionOrLackThereof,
+                    City = user.City,
+                    State = user.State,
+                    ProfileImageLocation = user.ProfileImageLocation,
+
+                    MatchLowestAge = user.MatchLowestAge,
+                    MatchHighestAge = user.MatchHighestAge,
+                    ZipCode = user.ZipCode,
+                    HomeTimeZone = user.HomeTimeZone,
+                    NumberOfKids = user.NumberOfKids,
+                    HeightInInches = user.HeightInInches,
+
+                    Gender = user.Gender,
+                    GenderPreference = user.GenderPreference,
+
+                    MyZipCodeOnly = user.MyZipCodeOnly,
+                    DesireForKids = user.DesireForKids,
+                    WillingnessToDateParents = user.WillingnessToDateParents,
+                    Smoker = user.Smoker,
+                    Drinker = user.Drinker,
+                    Stoner = user.Stoner,
+                    Single = user.Single,
+                    Monogamous = user.Monogamous,
+                };
+                return View(outModel);
+            }
+            
             return View();
         }
 

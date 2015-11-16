@@ -9,7 +9,8 @@ namespace Daterbase2._0.Models
     public class EditProfileViewModel
     {
         public DateTime? BirthDate { get; set; }
-        public DateTime ProfileCreationDate = DateTime.UtcNow;
+        //public DateTime ProfileCreationDate = DateTime.UtcNow;
+        //TODO
 
         public string DisplayUsername { get; set; }
         public string FirstName { get; set; }
