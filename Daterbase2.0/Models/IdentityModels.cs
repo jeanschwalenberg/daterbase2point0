@@ -62,6 +62,8 @@ namespace Daterbase2._0.Models
 
         //public virtual ICollection<Match> SavedMatches { get; set; }
         //TODO Saved Matches
+
+        public virtual System.Collections.Generic.ICollection<Message> Messages { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -75,5 +77,7 @@ namespace Daterbase2._0.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Message> Messages { get; set; }
     }
 }

@@ -581,6 +581,7 @@ namespace Daterbase2._0.Controllers
                 context.HttpContext.GetOwinContext().Authentication.Challenge(properties, LoginProvider);
             }
         }
+
         #endregion
     }
 }
