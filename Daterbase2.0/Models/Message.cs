@@ -9,9 +9,10 @@ namespace Daterbase2._0.Models
 {
     public class Message
     {
-        public int ID { get; set; }
+        public int MessageID { get; set; }
         public string Subject { get; set; }
         public string Contents { get; set; }
+        public string RecipientName { get; set; }
 
         [ForeignKey("Sender")]
         public string SenderID { get; set; }

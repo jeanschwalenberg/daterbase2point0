@@ -83,4 +83,17 @@ namespace Daterbase2._0.Models
         public string SelectedProvider { get; set; }
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
     }
+
+    public class MessageViewModel
+    {
+        [Required]
+        public string RecipientName { get; set; }
+
+        [Required]
+        public string Subject { get; set; }
+
+        [Required]
+        public string Contents { get; set; }
+
+    }
 }
