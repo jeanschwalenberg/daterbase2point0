@@ -9,6 +9,7 @@ namespace Daterbase2._0.Models
 {
     public class Message
     {
+        //TODO constraints on... like subject length... protect recipient name? senderID?
         public int MessageID { get; set; }
         public string Subject { get; set; }
         public string Contents { get; set; }

@@ -585,18 +585,23 @@ namespace Daterbase2._0.Controllers
         //TODO Postman Context - if I'm feeling frisky
 
         //Message POST
-        public ActionResult CreateMessage(string SenderID)
+        public ActionResult CreateMessage(MessageViewModel inModel)
         {
-            var dbContext = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-            var messages = dbContext.Messages.Where(m => m.SenderID == User.Identity.GetUserId()).ToList;
             if (ModelState.IsValid)
             {
-                var newMessage = new Message();
+                var dbContext = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+                var newMessage = new Message
+                {
+                    RecipientName = inModel.RecipientName,
+                    Subject = inModel.Subject,
+                    Contents = inModel.Contents,
+                    SenderID = User.Identity.GetUserId()
+                };
                 dbContext.Messages.Add(newMessage);
                 dbContext.SaveChanges();
             }
 
-            return View();
+            return View(inModel);
         }
 
         //Message GET
