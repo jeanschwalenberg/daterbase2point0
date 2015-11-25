@@ -585,6 +585,8 @@ namespace Daterbase2._0.Controllers
         //TODO Postman Context - if I'm feeling frisky
 
         //Message POST
+        //TODO Submit button. Idiot. Estupido.
+        [HttpPost]
         public ActionResult CreateMessage(MessageViewModel inModel)
         {
             if (ModelState.IsValid)
