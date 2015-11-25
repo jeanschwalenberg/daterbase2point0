@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace Daterbase2._0.Models
         //TODO constraints on... like subject length... protect recipient name? senderID?
         public int MessageID { get; set; }
         public string Subject { get; set; }
+        [Display(Name ="")]
         public string Contents { get; set; }
         public string RecipientName { get; set; }
 

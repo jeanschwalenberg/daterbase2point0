@@ -18,7 +18,7 @@
         <div class="col-lg-1">
             @Html.LabelFor(m => m.Subject, new { @class = "control-label"})
         </div>
-        <div class="col-lg-11 input-lg">
+        <div class="col-lg-11">
             @Html.TextBoxFor(m => m.Subject, new { @class = "form-control" })
         </div>
     </div>
@@ -37,8 +37,8 @@
         <div class="col-lg-1">
             @Html.LabelFor(m => m.Contents, new { @class = "control-label" })
         </div>
-        <div class="col-lg-11 input-lg">
-            @Html.TextBoxFor(m => m.Contents, new { @class = "form-control"})
+        <div class="col-lg-11">
+            @Html.TextAreaFor(m => m.Contents, new { @class = "form-control", rows = 87})
         </div>
     </div>
 
