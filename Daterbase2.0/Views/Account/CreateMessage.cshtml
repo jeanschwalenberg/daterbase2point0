@@ -14,6 +14,15 @@
 
     <hr />
 
+    <div class="form-control-group">
+        <div class="col-lg-1">
+            @Html.LabelFor(m => m.RecipientName, new { @class = "control-label" })
+        </div>    
+        <div class="col-lg-11">
+            @Html.TextBoxFor(m => m.RecipientName, new { @class = "control-label"})
+        </div>
+    </div>
+
     <div class="form-group">
         <div class="col-lg-1">
             @Html.LabelFor(m => m.Subject, new { @class = "control-label"})
@@ -48,7 +57,7 @@
 
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Send Message!</button>
+            <input type="submit" class="btn btn-default" value="Send Message!" />
         </div>
     </div>
 

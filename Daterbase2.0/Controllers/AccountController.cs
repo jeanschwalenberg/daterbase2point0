@@ -585,7 +585,6 @@ namespace Daterbase2._0.Controllers
         //TODO Postman Context - if I'm feeling frisky
 
         //Message POST
-        //TODO Submit button. Idiot. Estupido.
         [HttpPost]
         public ActionResult CreateMessage(MessageViewModel inModel)
         {
@@ -601,6 +600,8 @@ namespace Daterbase2._0.Controllers
                 };
                 dbContext.Messages.Add(newMessage);
                 dbContext.SaveChanges();
+
+                return RedirectToAction("Index", "Home");
             }
 
             return View(inModel);
