@@ -14,21 +14,25 @@
 
     <hr />
 
-    <div class="form-control-group">
-        <div class="col-lg-1">
+    <div class="form-group">
+        <div class="row">
+        <div class="col-lg-2">
             @Html.LabelFor(m => m.RecipientName, new { @class = "control-label" })
         </div>    
-        <div class="col-lg-11">
-            @Html.TextBoxFor(m => m.RecipientName, new { @class = "control-label"})
+        <div class="col-lg-10">
+            @Html.TextBoxFor(m => m.RecipientName, new { @class = "form-control"})
+        </div>
         </div>
     </div>
 
     <div class="form-group">
-        <div class="col-lg-1">
+        <div class="row">
+        <div class="col-lg-2">
             @Html.LabelFor(m => m.Subject, new { @class = "control-label"})
         </div>
-        <div class="col-lg-11">
+        <div class="col-lg-10">
             @Html.TextBoxFor(m => m.Subject, new { @class = "form-control" })
+        </div>
         </div>
     </div>
 
@@ -39,24 +43,21 @@
         </div>
     </div>*@
 
-    <br />
-    <br />
 
     <div class="form-group">
-        <div class="col-lg-1">
-            @Html.LabelFor(m => m.Contents, new { @class = "control-label" })
-        </div>
-        <div class="col-lg-11">
-            @Html.TextAreaFor(m => m.Contents, new { @class = "form-control", rows = 20})
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(m => m.Contents, new { @class = "control-label" })
+            </div>
+            <div class="col-lg-10">
+                @Html.TextAreaFor(m => m.Contents, new { @class = "form-control", rows = 20 })
+            </div>
         </div>
     </div>
 
-    <br />
-    <br />
-    <br />
 
     <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
+        <div class="col-sm-offset-3 col-sm-9">
             <input type="submit" class="btn btn-default" value="Send Message!" />
         </div>
     </div>
