@@ -25,6 +25,10 @@
                     <li>@Html.ActionLink("Browse Dater Profiles", "Index", "DaterProfile")</li>
                     <li>@Html.ActionLink("FAQs", "Index", "FAQ")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Create Message", "CreateMessage", "Account")</li>
+                    }
 
                 </ul>
                 @Html.Partial("_LoginPartial")
